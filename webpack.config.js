@@ -1,23 +1,27 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-module.export = {
+module.exports = {
     entry: './src/index.js',
     output: {
-        path: path.resolve(__dirname, '/dist'),
+        path: path.resolve(__dirname, './dist'),
         filename: 'bundle.js'
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: './src/index.html',
-            inject: false
+            template: './src/index.html'
+            //inject: false
         })
     ],
 
     devServer: {
-        proxy: {
-            '/': 'http://localhost:3000'
+        static: {
+            directory: path.resolve(__dirname, 'build')
         },
+        proxy: {
+            '/': 'http://localhost:3333'
+        },
+        compress: true,
         port: 8080
     },
 
@@ -39,12 +43,16 @@ module.export = {
             },
             {
                 test: /\.css$/,
-                use: 'css-loader',
+                use: ['style-loader', 'css-loader'],
             },
             {
                 test: /\.s[ac]ss$/i,
                 use: ['style-loader', 'css-loader', 'sass-loader'],
             },
+            {
+                test: /\.(png|svg|jpg|jpeg|gif)$/i,
+                type: 'asset/resource',
+              },
         ]
 
     }
