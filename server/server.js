@@ -8,6 +8,8 @@ const PORT = 3333;
 
 app.use(express.static(path.resolve(__dirname, '../dist')));
 
+// app.use('/', (req, res) => {
+//   return res.status(200).sendFile(path.resolve(__dirname, '../stc/client/styles.css'))});
 
 app.get('/', (req, res) => {
     return res.status(200).sendFile(path.resolve(__dirname, '../src/index.html'));
