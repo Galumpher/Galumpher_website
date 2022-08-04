@@ -22,7 +22,7 @@ const NavBar = () => {
         <a href="https://github.com/oslabs-beta/Galumpher/tree/main">GitHub</a><br/>
         <br />
         <br />
-        <a href="">LinkedIn</a>
+        <a href="https://www.linkedin.com/company/galumpher/about/">LinkedIn</a>
       </div>
 
     );
