@@ -9,8 +9,7 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: './src/index.html'
-            //inject: false
+            template: './src/index.html',
         })
     ],
 
@@ -43,7 +42,11 @@ module.exports = {
             },
             {
                 test: /\.css$/,
+<<<<<<< HEAD
                 use: ['style-loader', 'css-loader'],
+=======
+                use: ['style-loader', 'css-loader']
+>>>>>>> dev
             },
             {
                 test: /\.s[ac]ss$/i,
@@ -54,6 +57,5 @@ module.exports = {
                 type: 'asset/resource',
               },
         ]
-
     }
 };
