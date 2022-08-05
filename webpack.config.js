@@ -5,7 +5,8 @@ module.exports = {
     entry: './src/index.js',
     output: {
         path: path.resolve(__dirname, './dist'),
-        filename: 'bundle.js'
+        filename: 'bundle.js',
+        clean: true,
     },
     plugins: [
         new HtmlWebpackPlugin({
@@ -42,11 +43,7 @@ module.exports = {
             },
             {
                 test: /\.css$/,
-<<<<<<< HEAD
                 use: ['style-loader', 'css-loader'],
-=======
-                use: ['style-loader', 'css-loader']
->>>>>>> dev
             },
             {
                 test: /\.s[ac]ss$/i,
