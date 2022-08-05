@@ -42,12 +42,20 @@ module.exports = {
             },
             {
                 test: /\.css$/,
+<<<<<<< HEAD
+                use: ['style-loader', 'css-loader'],
+=======
                 use: ['style-loader', 'css-loader']
+>>>>>>> dev
             },
             {
                 test: /\.s[ac]ss$/i,
                 use: ['style-loader', 'css-loader', 'sass-loader'],
             },
+            {
+                test: /\.(png|svg|jpg|jpeg|gif)$/i,
+                type: 'asset/resource',
+              },
         ]
     }
 };
