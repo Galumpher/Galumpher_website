@@ -1,5 +1,5 @@
 import React from 'react';
-import screenshot from './images/galumper interface.png'
+import screenshot from './images/galumper interface.gif'
 
 const Features = () => {
 
